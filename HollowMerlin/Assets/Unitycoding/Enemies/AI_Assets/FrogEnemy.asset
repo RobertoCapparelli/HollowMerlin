@@ -753,7 +753,7 @@ MonoBehaviour:
   isShared: 1
   name: StartPosition
   group: Default
-  value: {x: -16.000198, y: -3.5818849, z: 0}
+  value: {x: -3.6921263, y: -1.1011411, z: 0}
 --- !u!114 &4545266278630986284
 MonoBehaviour:
   m_ObjectHideFlags: 1
