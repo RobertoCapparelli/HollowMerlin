@@ -16,7 +16,7 @@ MonoBehaviour:
   isShared: 0
   name: None
   group: Default
-  value: 0
+  value: 1
 --- !u!114 &-8791795905546296933
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -753,7 +753,7 @@ MonoBehaviour:
   isShared: 1
   name: StartPosition
   group: Default
-  value: {x: -3.6921263, y: -1.1011411, z: 0}
+  value: {x: -7.32, y: -0.95, z: 0}
 --- !u!114 &4545266278630986284
 MonoBehaviour:
   m_ObjectHideFlags: 1

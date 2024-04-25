@@ -188,7 +188,7 @@ MonoBehaviour:
   position:
     serializedVersion: 2
     x: 25332
-    y: 24963
+    y: 24887
     width: 150
     height: 30
   color: 5
@@ -231,6 +231,11 @@ MonoBehaviour:
   variables:
   - {fileID: -467779498270410754}
   - {fileID: -6511884666348132041}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   nodes:
   - {fileID: 8113955491033988002}
   - {fileID: -296648695664174656}
@@ -266,8 +271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25333
-    y: 25122
+    x: 25340
+    y: 25108
     width: 150
     height: 30
   color: 0
