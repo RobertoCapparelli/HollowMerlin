@@ -24,7 +24,9 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
     private FlyEnemyControllerStatus status;
 
     private float verticalMovementRange = 2.0f; // Range for random vertical movement
-    private float maxVerticalSpeed = 5.0f; // Maximum vertical speed
+    private float maxVerticalSpeed = 1.0f; // Maximum vertical speed
+
+    private Animator myAnimator;
     #endregion
 
     private float HitForce = 0;
@@ -44,6 +46,7 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myCollider = GetComponentInChildren<BoxCollider2D>();
+        myAnimator = GetComponent<Animator>();
         ResetMe();
     }
 
@@ -76,11 +79,10 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
 
     public void SetInputDirection(Vector2 inputDirection)
     {
-        Vector2 desiredVelocity = new Vector2(1, 1);
-        float movementSpeedModifier = 1;
         float airBuoyancyForce = 1;
 
         this.inputDirection = inputDirection.normalized;
+
         Vector2 performedVelocity = PerformedVelocity(this.inputDirection);
         switch (status)
         {
@@ -88,11 +90,11 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
                 preHitVelocity = performedVelocity;
                 break;
             case FlyEnemyControllerStatus.moving:
-                // Apply movement speed with a drag factor to simulate air resistance
+
                 myRigidbody.velocity = performedVelocity;
 
                 // Add a slight upward force to simulate air buoyancy (optional)
-                myRigidbody.AddForce(Vector2.up * airBuoyancyForce);
+                //myRigidbody.AddForce(Vector2.up * airBuoyancyForce);
                 if (FaceDirection)
                 {
                     ChangeYRotation();
@@ -120,11 +122,14 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
         return new Vector2(horizontalVelocity, verticalVelocity);
     }
 
-    private void ChangeYRotation() {
+    private void ChangeYRotation()
+    {
         if (inputDirection.x == 0 || movementSpeed == 0) return;
+        myAnimator.SetTrigger("Turn");
+        /*
         Vector3 eulerRotation = transform.eulerAngles;
         eulerRotation.y = inputDirection.x < 0 ? 180 : 0;
-        transform.eulerAngles = eulerRotation;
+        transform.eulerAngles = eulerRotation;*/
     }
     public void ReverseInputDirection()
     {

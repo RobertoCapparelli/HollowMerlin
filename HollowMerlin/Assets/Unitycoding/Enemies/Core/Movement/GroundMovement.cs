@@ -20,6 +20,9 @@ public class GroundMovement : MonoBehaviour, IEnemyMovement {
     private float movementSpeed;
     private float jumpForce;
     private Vector2 inputDirection;
+
+
+
     public Vector2 InputDirection {
         get { return inputDirection; }
     }
@@ -75,6 +78,7 @@ public class GroundMovement : MonoBehaviour, IEnemyMovement {
     private void Awake() {
         myRigidbody = GetComponent<Rigidbody2D>();
         myCollider = GetComponentInChildren<BoxCollider2D>();
+
         ResetMe();
     }
 

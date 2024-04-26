@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/AIV_Metroid/Scenes/Test/PlayerDevTestScene.unity
+    path: Assets/AIV_Metroid/Scenes/Test/HollowMerlinTestMap.unity
     guid: 51fe809cedf699c44b7dceabfc341766
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 739bb3c88ba50bb4186489f35f14e694, type: 2}

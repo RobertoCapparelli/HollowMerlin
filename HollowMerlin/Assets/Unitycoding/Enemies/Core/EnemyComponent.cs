@@ -147,8 +147,8 @@ public class EnemyComponent : MonoBehaviour, IDamager
 
     private void InitializeAI () {
         codeBehaviour.stateMachine = stateMachine;
-        codeBehaviour.stateMachine.SetVariable(playerVariableString, Player.Get().gameObject);
-        codeBehaviour.stateMachine.SetVariable(startPositionString, transform.position);
+        //codeBehaviour.stateMachine.SetVariable(playerVariableString, Player.Get().gameObject);
+        //codeBehaviour.stateMachine.SetVariable(startPositionString, transform.position);
         foreach (ExtendedVariable variable in stateMachineVariables) {
             codeBehaviour.stateMachine.SetVariable(variable.VariableName, variable.GetValue());
         }
