@@ -17,6 +17,23 @@ MonoBehaviour:
   name: None
   group: Default
   value: 0
+--- !u!114 &-8764622184014449981
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 0
 --- !u!114 &-8714227779116869294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -442,6 +459,40 @@ MonoBehaviour:
   isOpen: 1
   variable: {fileID: 8570782603280102630}
   array: {fileID: -6621769518420915045}
+--- !u!114 &-5959627731271059574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adea126aa51bade468864cc2eb5828c1, type: 3}
+  m_Name: Variable.SetBool
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  variable: {fileID: 1736813703547995575}
+  value: {fileID: -8764622184014449981}
+  everyFrame: 0
+--- !u!114 &-5895408802185354661
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 0
 --- !u!114 &-5891173936610311696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -767,6 +818,22 @@ MonoBehaviour:
   name: None
   group: Default
   value: 1
+--- !u!114 &-3927265974053824831
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269ae332195316b459df13f78995041e, type: 3}
+  m_Name: Variable.CompareBool
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  variable: {fileID: 4474156822714412632}
+  equals: {fileID: -2999845389189997586}
 --- !u!114 &-3915309068937291740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -856,6 +923,23 @@ MonoBehaviour:
   isOpen: 1
   variable: {fileID: -6355474775499541752}
   equals: {fileID: 2033286949793287774}
+--- !u!114 &-3653614653235805385
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430ec49b4c8407540b4a3b207ebc3881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 0
 --- !u!114 &-3526373413385543071
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -909,6 +993,23 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &-3186200726317816307
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c9e419f86a34748948479c8e6d347f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toNode: {fileID: 7566464664841203408}
+  fromNode: {fileID: -2581639684103654454}
+  mute: 0
+  conditions:
+  - {fileID: 3342963253506063286}
 --- !u!114 &-3186123616464267253
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -987,6 +1088,41 @@ MonoBehaviour:
   isHidden: 0
   isShared: 1
   name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
+--- !u!114 &-2999845389189997586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 1
+--- !u!114 &-2987393027235354984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
   group: Default
   value: {fileID: 0}
   scenePath: 
@@ -1086,8 +1222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 24960
-    y: 24965
+    x: 24958
+    y: 24963
     width: 150
     height: 30
   color: 2
@@ -1096,7 +1232,9 @@ MonoBehaviour:
   name: Any State
   isStartNode: 0
   parent: {fileID: 11400000}
-  transitions: []
+  transitions:
+  - {fileID: 3470046657353501609}
+  - {fileID: -3186200726317816307}
   isSequence: 0
   actions: []
 --- !u!114 &-2162899691419638925
@@ -1134,6 +1272,23 @@ MonoBehaviour:
   name: None
   group: Default
   value: Walking
+--- !u!114 &-1921953282690315462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 1
 --- !u!114 &-1565333822444297818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1200,6 +1355,23 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &-1279138703694316152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: New Bool
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Reset
+  group: Default
+  value: 0
 --- !u!114 &-1203536176943663846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1408,11 +1580,15 @@ MonoBehaviour:
   - {fileID: -5200790123357440663}
   - {fileID: 9100355493984763384}
   - {fileID: -30791235365597013}
+  - {fileID: 2125803256208131887}
+  - {fileID: -1279138703694316152}
   nodes:
   - {fileID: -2581639684103654454}
   - {fileID: 2590993806724404174}
   - {fileID: 9223154635174690371}
   - {fileID: -1565333822444297818}
+  - {fileID: 1655654199562938499}
+  - {fileID: 7566464664841203408}
 --- !u!114 &12168204460982625
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1588,6 +1764,52 @@ MonoBehaviour:
   mute: 0
   conditions:
   - {fileID: -4154351938023958693}
+--- !u!114 &1482829080215749527
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 0
+--- !u!114 &1655654199562938499
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7f47e6ef9b75e439c8ccfb10d6fdf0, type: 3}
+  m_Name: Die
+  m_EditorClassIdentifier: 
+  position:
+    serializedVersion: 2
+    x: 24960
+    y: 24813
+    width: 150
+    height: 30
+  color: 0
+  comment: 
+  time: 0
+  name: Die
+  isStartNode: 0
+  parent: {fileID: 11400000}
+  transitions: []
+  isSequence: 0
+  actions:
+  - {fileID: 2294835375351087252}
+  - {fileID: 4859036855562318728}
 --- !u!114 &1669226278474736383
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1640,6 +1862,23 @@ MonoBehaviour:
   mute: 0
   conditions:
   - {fileID: -5499960933155877207}
+--- !u!114 &1736813703547995575
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Reset
+  group: Default
+  value: 0
 --- !u!114 &2033286949793287774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1657,6 +1896,57 @@ MonoBehaviour:
   name: None
   group: Default
   value: 0
+--- !u!114 &2125803256208131887
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: New Bool
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Death
+  group: Default
+  value: 0
+--- !u!114 &2154956853463330822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adea126aa51bade468864cc2eb5828c1, type: 3}
+  m_Name: Variable.SetBool
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  variable: {fileID: 6485963534483683828}
+  value: {fileID: -5895408802185354661}
+  everyFrame: 0
+--- !u!114 &2294835375351087252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486d5a163382a6743b2995cf2abed3d1, type: 3}
+  m_Name: EnemyMovement.SetMovementSpeedAction
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  gameObject: {fileID: -2987393027235354984}
+  movementSpeed: {fileID: -3653614653235805385}
+  everyFrame: {fileID: 1482829080215749527}
 --- !u!114 &2380984175108232987
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1861,6 +2151,22 @@ MonoBehaviour:
   parameter: {fileID: -1203536176943663846}
   value: {fileID: 3371385900377215603}
   everyFrame: 0
+--- !u!114 &3342963253506063286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269ae332195316b459df13f78995041e, type: 3}
+  m_Name: Variable.CompareBool
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  variable: {fileID: 4260444274536632846}
+  equals: {fileID: -1921953282690315462}
 --- !u!114 &3371385900377215603
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1895,6 +2201,23 @@ MonoBehaviour:
   mute: 0
   conditions:
   - {fileID: -3896691123805214292}
+--- !u!114 &3470046657353501609
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c9e419f86a34748948479c8e6d347f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toNode: {fileID: 1655654199562938499}
+  fromNode: {fileID: -2581639684103654454}
+  mute: 0
+  conditions:
+  - {fileID: -3927265974053824831}
 --- !u!114 &3521191890270652167
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1999,6 +2322,23 @@ MonoBehaviour:
   name: None
   group: Default
   value: {x: 0, y: 0, z: 0}
+--- !u!114 &4260444274536632846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Reset
+  group: Default
+  value: 0
 --- !u!114 &4260562139647262278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2030,6 +2370,41 @@ MonoBehaviour:
   isHidden: 0
   isShared: 0
   name: None
+  group: Default
+  value: 0
+--- !u!114 &4343695388277176875
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: Owner
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
+--- !u!114 &4474156822714412632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Death
   group: Default
   value: 0
 --- !u!114 &4532179062991031744
@@ -2101,6 +2476,23 @@ MonoBehaviour:
   name: None
   group: Default
   value: {x: 0, y: 0, z: 0}
+--- !u!114 &4859036855562318728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad62077ce829d04c8fbafa35bc0f331, type: 3}
+  m_Name: Animator.SetTrigger
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  gameObject: {fileID: 4343695388277176875}
+  parameter: {fileID: 5818761781809681147}
+  everyFrame: 0
 --- !u!114 &4921725712704529884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2321,6 +2713,23 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &5818761781809681147
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6221eae08e534b42b281da6a02edeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: Death
 --- !u!114 &5891755992392251104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2422,6 +2831,23 @@ MonoBehaviour:
   name: PatrolSpeed
   group: Default
   value: 1
+--- !u!114 &6485963534483683828
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Death
+  group: Default
+  value: 0
 --- !u!114 &6605596800410836316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2525,6 +2951,52 @@ MonoBehaviour:
   name: Attacking
   group: Default
   value: 0
+--- !u!114 &7501148376088923480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c9e419f86a34748948479c8e6d347f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toNode: {fileID: 2590993806724404174}
+  fromNode: {fileID: 7566464664841203408}
+  mute: 0
+  conditions: []
+--- !u!114 &7566464664841203408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7f47e6ef9b75e439c8ccfb10d6fdf0, type: 3}
+  m_Name: Reset
+  m_EditorClassIdentifier: 
+  position:
+    serializedVersion: 2
+    x: 24955
+    y: 25080
+    width: 150
+    height: 30
+  color: 0
+  comment: 
+  time: 0
+  name: Reset
+  isStartNode: 0
+  parent: {fileID: 11400000}
+  transitions:
+  - {fileID: 7501148376088923480}
+  isSequence: 0
+  actions:
+  - {fileID: 2154956853463330822}
+  - {fileID: -5959627731271059574}
 --- !u!114 &7618922920116250176
 MonoBehaviour:
   m_ObjectHideFlags: 1
