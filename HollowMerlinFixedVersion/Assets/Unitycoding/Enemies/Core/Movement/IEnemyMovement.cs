@@ -1,7 +1,8 @@
 using UnityEngine;
 
 public enum EnemyMovementType {
-    ground
+    ground,
+    fly
 }
 
 public interface IEnemyMovement 

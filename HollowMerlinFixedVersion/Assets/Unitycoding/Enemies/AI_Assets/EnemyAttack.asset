@@ -1148,8 +1148,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25240.195
-    y: 25221.576
+    x: 25229.195
+    y: 25220.576
     width: 150
     height: 45
   color: 1
@@ -1377,7 +1377,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c16a3faa3edd0ae4aa7bb254ef5b7efe, type: 3}
-  m_Name: FrogEnemyPro
+  m_Name: EnemyAttack
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
@@ -1388,7 +1388,7 @@ MonoBehaviour:
   color: 1
   comment: 
   time: 0
-  name: FrogEnemyPro
+  name: EnemyAttack
   isStartNode: 0
   parent: {fileID: 0}
   transitions: []
@@ -2797,7 +2797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25235.584
+    x: 25231.584
     y: 25109.69
     width: 150
     height: 30

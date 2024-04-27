@@ -66,6 +66,9 @@ public class EnemyComponent : MonoBehaviour, IDamager
             case EnemyMovementType.ground:
                 movementComponent = gameObject.AddComponent<GroundMovement>();
                 break;
+            case EnemyMovementType.fly:
+                movementComponent = gameObject.AddComponent<FlyMovement>();
+                break;
         }
     }
 
