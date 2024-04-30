@@ -9,10 +9,13 @@ public class EnemyHittableCollider : EnemyCollider, IDamageble
 
     private void Awake() {
         enemyComponent = GetComponentInParent<EnemyComponent>();
+        
     }
 
     public void TakeDamage (DamageContainer container) {
         //enemyComponent e notifica il danno
+        
+        enemyComponent.TakeDamage(container);
     }
 
 }

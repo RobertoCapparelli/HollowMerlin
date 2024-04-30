@@ -2,12 +2,14 @@ using UnityEngine;
 using ICode;
 using AIV_Metroid_Player;
 using UnityEngine.Events;
+using System;
+using System.ComponentModel;
 
-public class EnemyComponent : MonoBehaviour, IDamager
+public class EnemyComponent : MonoBehaviour, IDamager, IDamageble
 {
 
     [SerializeField]
-    private float maxHP;
+    private HealthModule healthModule;
     [SerializeField]
     private EnemyCollider[] meleeColliders;
     [SerializeField]
@@ -25,7 +27,7 @@ public class EnemyComponent : MonoBehaviour, IDamager
     private Animator animator;
     private IEnemyMovement movementComponent;
 
-    private float hp;
+    
 
 
     private void Awake() {
@@ -40,10 +42,41 @@ public class EnemyComponent : MonoBehaviour, IDamager
         }
         InitializeAI();
         ResetMe();
+        healthModule.OnDamageTaken += InternalOnDamageTaken;
+        healthModule.OnDeath += InternalOnDeath;
     }
 
+    #region HealthModule
+    public void ResetHealth()
+    {
+        healthModule.Reset();
+    }
+
+    public void TakeDamage(DamageContainer damage)
+    {
+        healthModule.TakeDamage(damage);
+        Debug.Log($"La vita del nemico ({gameObject.name}) è di: {healthModule.CurrentHP}");
+
+
+        Hitted(damage.DamageImpulse, damage.ContactPoint);
+
+        
+    }
+
+    public void InternalOnDamageTaken(DamageContainer container)
+    {
+        
+        //SetInvulnearble(damageInvTime);
+    }
+
+    public void InternalOnDeath()
+    {
+        gameObject.SetActive(false);
+    }
+    #endregion
+
     public void ResetMe () {
-        hp = maxHP;
+        ResetHealth();
     }
 
     private void OnPlayerHittedMelee (IDamageble player, Vector2 contactPoint) {
