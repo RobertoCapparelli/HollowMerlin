@@ -24,6 +24,10 @@ public static class InputManager
     public static float Player_Horizontal {
         get { return input.Player.Move.ReadValue<Vector2>().x; }
     }
+    public static float Player_Vertical
+    {
+        get { return input.Player.Move.ReadValue<Vector2>().y; }
+    }
     public static bool Player_Jump_Pressed {
         get { return input.Player.Jump.IsPressed(); }
     }

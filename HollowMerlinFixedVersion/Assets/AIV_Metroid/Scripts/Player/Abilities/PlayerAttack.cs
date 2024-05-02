@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class PlayerAttack : PlayerAbilityBase
 {
@@ -17,10 +18,17 @@ public class PlayerAttack : PlayerAbilityBase
     private DamageContainer damageContainer;
     [SerializeField]
     private float attackCooldown;
+    [SerializeField]
+    private float bounceForce;
 
     private bool canAttack;
 
     protected BoxCollider2D attackCollider;
+    protected Animator animator;
+
+    [SerializeField]
+    Vector3 offset = new Vector3(2.5f, 0, 0);
+
 
     #endregion
 
@@ -30,10 +38,16 @@ public class PlayerAttack : PlayerAbilityBase
     {
         InputManager.Player.Attack.performed += OnInputPerform;
         attackCollider = gameObject.GetComponent<BoxCollider2D>();
+        animator = gameObject.GetComponent<Animator>();
+
+
         attackCollider.enabled = false;
         canAttack = true;
-    } 
+    }
+    protected void FixedUpdate()
+    {
 
+    }
     protected void OnTriggerEnter2D(Collider2D other)
     {
         InternalTrigger(other);
@@ -52,9 +66,61 @@ public class PlayerAttack : PlayerAbilityBase
         if (!input.performed) return;
         if (!canAttack) return;
 
+        GetDirectionAttack();
+
         attackCollider.enabled = true;
         StartCoroutine(WaitForAttackCooldown());
-        SetAnimationParameter();
+
+        //Visual
+        //animator.transform.SetPositionAndRotation(attackCollider.transform.localPosition, attackCollider.transform.rotation);
+
+        SetAnimationParameter("FireAttack");
+
+    }
+
+    private void GetDirectionAttack(float a)
+    {
+        gameObject.transform.SetPositionAndRotation(playerController.transform.position +
+                                        (gameObject.transform.forward.x > 0 ? offset : -offset), Quaternion.identity);
+
+
+
+        float verticalDirection = InputManager.Player_Vertical;
+
+        if (verticalDirection == 0) return;
+
+        float horizontalDirection = InputManager.Player_Horizontal;
+
+        if (playerController.ComputedDirection.y < 0)
+        {
+            gameObject.transform.RotateAround(gameObject.transform.position - offset, Vector3.forward, 90);
+
+        }
+        else
+        {
+            gameObject.transform.RotateAround(gameObject.transform.position - offset, Vector3.forward, -90);
+        }
+
+
+    }
+    private void GetDirectionAttack()
+    {
+        Vector3 resultOffset = playerController.transform.forward.x >= 0 ? offset : -offset;
+        gameObject.transform.position = playerController.transform.position + resultOffset;
+        gameObject.transform.rotation = Quaternion.identity;
+
+        float verticalDirection = InputManager.Player_Vertical;
+        if (verticalDirection == 0) return;
+
+        gameObject.transform.position = playerController.transform.position + offset;
+        if (verticalDirection < 0.0)
+        {
+            gameObject.transform.RotateAround(playerController.transform.position, Vector3.forward, -90);
+        }
+        else
+        {
+            gameObject.transform.RotateAround(playerController.transform.position, Vector3.forward, 90);
+        }
 
     }
     #endregion
@@ -69,9 +135,23 @@ public class PlayerAttack : PlayerAbilityBase
         if (damageable == null) return;
 
 
-        Vector2 hitPosition = other.ClosestPoint(transform.position);
+        Vector3 hitPosition = other.ClosestPoint(transform.position);
         damageContainer.SetContactPoint(hitPosition);
         damageable.TakeDamage(damageContainer);
+
+
+
+        /*  
+         * Ho provato ad aggiungere un impulso al player che quando colpisce un environment ha una forza nella direzione opposta al colpo,
+         * però il player si sposta solo sull'asse y, ho testato sia con la velocity sia con l'impulso, anche inserendo il vector.up (come abbiamo
+         * fatto in classe) il player continua a spostarsi solo sull'asse delle y. presumo che il problema sia che nel frame in cui viene calcolato 
+         * il tutto anche il collider dell'attacco fa parte del player e quindi potrebbe bloccarlo, però non capisco allora perchè sull'asse delle y riesce
+         * a spostarsi. 
+         
+        Vector3 hitDirection = playerController.transform.position  - hitPosition;
+        
+        playerController.SetImpulse(hitDirection.normalized * bounceForce); */
+
 
         canAttack = false;
 
@@ -82,7 +162,7 @@ public class PlayerAttack : PlayerAbilityBase
     #region Coroutine
 
     IEnumerator WaitForAttackCooldown()
-    {       
+    {
         yield return new WaitForSeconds(attackCooldown); // Wait for attack cooldown duration
         attackCollider.enabled = false;
         canAttack = true;
@@ -98,7 +178,7 @@ public class PlayerAttack : PlayerAbilityBase
 
     public override void OnInputEnabled()
     {
-       canAttack = true;
+        canAttack = true;
     }
 
     public override void StopAbility()
@@ -109,9 +189,10 @@ public class PlayerAttack : PlayerAbilityBase
     #endregion
 
     #region Visual
-    private void SetAnimationParameter()
+    private void SetAnimationParameter(string name)
     {
-            playerVisual.SetAnimatorParameter(attackAnimatorString);
+        animator.SetTrigger(Animator.StringToHash(name));
+
     }
     #endregion
 

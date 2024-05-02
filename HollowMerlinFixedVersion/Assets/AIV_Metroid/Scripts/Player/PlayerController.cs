@@ -155,6 +155,12 @@ namespace AIV_Metroid_Player {
             SetVelocity(Vector2.zero);
             playerRigidbody.AddForce(impulse, ForceMode2D.Impulse);
         }
+        public void SetImpulse(Vector3 direction, Vector3 force)
+        {
+            Vector3 result = new Vector3(direction.x * force.x, direction.y * force.y, 0);
+            SetVelocity(Vector2.zero);
+            playerRigidbody.AddForce(result, ForceMode2D.Impulse);
+        }
         #endregion
 
         #region PrivateMethods
