@@ -36,6 +36,7 @@ namespace ICode{
 		Behaviour,
 		RectTransform,
 		SceneManagement,
-		ParticleSystem
+		ParticleSystem,
+		EnemyComponent
 	}
 }

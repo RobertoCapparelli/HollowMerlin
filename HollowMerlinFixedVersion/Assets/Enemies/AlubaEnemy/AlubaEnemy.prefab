@@ -231,10 +231,10 @@ PrefabInstance:
     - target: {fileID: 9014806635597815835, guid: 4ea2194ea6946e348b615810aa773c3b, type: 3}
       propertyPath: stateMachine
       value: 
-      objectReference: {fileID: 11400000, guid: 9b19f507b36e01b4fa080daaabb033b0, type: 2}
+      objectReference: {fileID: 11400000, guid: 21f55fac3151488469d98cb464e8c0f5, type: 2}
     - target: {fileID: 9014806635597815835, guid: 4ea2194ea6946e348b615810aa773c3b, type: 3}
       propertyPath: stateMachineVariables.Array.size
-      value: 7
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9014806635597815835, guid: 4ea2194ea6946e348b615810aa773c3b, type: 3}
       propertyPath: stateMachineVariables.Array.data[0].type
@@ -278,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9014806635597815835, guid: 4ea2194ea6946e348b615810aa773c3b, type: 3}
       propertyPath: stateMachineVariables.Array.data[1].floatValue
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9014806635597815835, guid: 4ea2194ea6946e348b615810aa773c3b, type: 3}
       propertyPath: stateMachineVariables.Array.data[2].floatValue
@@ -310,11 +310,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9014806635597815835, guid: 4ea2194ea6946e348b615810aa773c3b, type: 3}
       propertyPath: stateMachineVariables.Array.data[0].variableName
-      value: DistanceToAttack
+      value: PatrolSpeed
       objectReference: {fileID: 0}
     - target: {fileID: 9014806635597815835, guid: 4ea2194ea6946e348b615810aa773c3b, type: 3}
       propertyPath: stateMachineVariables.Array.data[1].variableName
-      value: Attack_CD
+      value: TimeTurn
       objectReference: {fileID: 0}
     - target: {fileID: 9014806635597815835, guid: 4ea2194ea6946e348b615810aa773c3b, type: 3}
       propertyPath: stateMachineVariables.Array.data[2].variableName
@@ -381,7 +381,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   variableName: Checkpoints
-  gameObjects: []
+  gameObjects:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!212 &2959216814682606204
 SpriteRenderer:
   m_ObjectHideFlags: 0

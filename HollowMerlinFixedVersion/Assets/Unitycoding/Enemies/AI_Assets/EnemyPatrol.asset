@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25462.5
-    y: 25051
+    x: 25451.5
+    y: 25046
     width: 150
     height: 30
   color: 0
@@ -30,9 +30,9 @@ MonoBehaviour:
   actions:
   - {fileID: 5536001297515884355}
   - {fileID: 2404341776492413317}
-  - {fileID: -1140613324428781751}
-  - {fileID: -7368277368539078170}
   - {fileID: 3203539868406635409}
+  - {fileID: -7368277368539078170}
+  - {fileID: -1140613324428781751}
 --- !u!114 &-8130116786780926786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,7 +65,8 @@ MonoBehaviour:
   toNode: {fileID: -8714227779116869294}
   fromNode: {fileID: -670220844609286034}
   mute: 0
-  conditions: []
+  conditions:
+  - {fileID: 2011834581524234050}
 --- !u!114 &-8091411475513230788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +118,23 @@ MonoBehaviour:
   isOpen: 1
   gameObject: {fileID: -3186123616464267253}
   target: {fileID: 4002502282682713284}
+--- !u!114 &-7136863013565518416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed226cefbfd03448ade005fca23d1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: {x: 0, y: 0}
 --- !u!114 &-6621769518420915045
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -150,6 +168,24 @@ MonoBehaviour:
   name: None
   group: Default
   value: 0
+--- !u!114 &-6541320647410663971
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0946699027c5a45a0986ebc7bf47c1, type: 3}
+  m_Name: Animator.SetBool
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  gameObject: {fileID: -2204787612891324303}
+  parameter: {fileID: -2895263974503831449}
+  value: {fileID: -2588498691841352748}
+  everyFrame: 0
 --- !u!114 &-6425689977292040451
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,6 +425,40 @@ MonoBehaviour:
   - {fileID: -6253712850985153971}
   - {fileID: 5226112606351802161}
   - {fileID: 2400160166851497361}
+--- !u!114 &-2895263974503831449
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6221eae08e534b42b281da6a02edeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: Walking
+--- !u!114 &-2809555507521587751
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430ec49b4c8407540b4a3b207ebc3881, type: 3}
+  m_Name: New Float
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: TimeTurn
+  group: Default
+  value: 0
 --- !u!114 &-2709741151427863321
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,6 +475,23 @@ MonoBehaviour:
   isOpen: 1
   variable: {fileID: -4877834656179048988}
   maxValue: {fileID: 5428688104661461012}
+--- !u!114 &-2588498691841352748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 0
 --- !u!114 &-2581639684103654454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -432,6 +519,41 @@ MonoBehaviour:
   transitions: []
   isSequence: 0
   actions: []
+--- !u!114 &-2204787612891324303
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: Owner
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
+--- !u!114 &-1793769329404426467
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad62077ce829d04c8fbafa35bc0f331, type: 3}
+  m_Name: Animator.SetTrigger
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  gameObject: {fileID: 732870965262688218}
+  parameter: {fileID: 5410605808193780401}
+  everyFrame: 0
 --- !u!114 &-1383737820859360772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -497,8 +619,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25457
-    y: 25151
+    x: 25447
+    y: 25136
     width: 150
     height: 30
   color: 0
@@ -511,9 +633,46 @@ MonoBehaviour:
   - {fileID: -8126991406891457186}
   isSequence: 0
   actions:
+  - {fileID: -649783944027669630}
+  - {fileID: -6541320647410663971}
+  - {fileID: -1793769329404426467}
   - {fileID: 4260562139647262278}
   - {fileID: -2709741151427863321}
   - {fileID: -4098568999058597007}
+--- !u!114 &-649783944027669630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a777b6c68bad714ea210d48b182aca8, type: 3}
+  m_Name: Rigidbody2D.SetVelocity
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  gameObject: {fileID: 1592195512632896321}
+  velocity: {fileID: -7136863013565518416}
+  everyFrame: 0
+--- !u!114 &-282595286969035971
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea61a25830fa04a40b5615edd61bb9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 0
 --- !u!114 &-30791235365597013
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -541,7 +700,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c16a3faa3edd0ae4aa7bb254ef5b7efe, type: 3}
-  m_Name: EnemyAttack
+  m_Name: EnemyPatrol
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
@@ -552,7 +711,7 @@ MonoBehaviour:
   color: 1
   comment: 
   time: 0
-  name: EnemyAttack
+  name: EnemyPatrol
   isStartNode: 0
   parent: {fileID: 0}
   transitions: []
@@ -563,6 +722,7 @@ MonoBehaviour:
   - {fileID: -5200790123357440663}
   - {fileID: 9100355493984763384}
   - {fileID: -30791235365597013}
+  - {fileID: -2809555507521587751}
   nodes:
   - {fileID: -2581639684103654454}
   - {fileID: 2590993806724404174}
@@ -583,6 +743,24 @@ MonoBehaviour:
   name: CurrentIndex
   group: Default
   value: 0
+--- !u!114 &732870965262688218
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: Owner
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &741835950328751457
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -635,6 +813,24 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &1592195512632896321
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: Owner
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &1730073016863152767
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -652,6 +848,39 @@ MonoBehaviour:
   mute: 0
   conditions:
   - {fileID: -5499960933155877207}
+--- !u!114 &1922952216474822369
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430ec49b4c8407540b4a3b207ebc3881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: TimeTurn
+  group: Default
+  value: 0
+--- !u!114 &2011834581524234050
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce44f4ff7859f449b4c819f29f73188, type: 3}
+  m_Name: Time.ExitTime
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  time: {fileID: 1922952216474822369}
+  remember: {fileID: -282595286969035971}
 --- !u!114 &2400160166851497361
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -700,8 +929,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25235
-    y: 24994.758
+    x: 25237
+    y: 24993.758
     width: 150
     height: 45
   color: 5
@@ -880,6 +1109,23 @@ MonoBehaviour:
   variable: {fileID: -7773786817135158756}
   value: {fileID: -1383737820859360772}
   everyFrame: 0
+--- !u!114 &5410605808193780401
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6221eae08e534b42b281da6a02edeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: Turn
 --- !u!114 &5428688104661461012
 MonoBehaviour:
   m_ObjectHideFlags: 1
