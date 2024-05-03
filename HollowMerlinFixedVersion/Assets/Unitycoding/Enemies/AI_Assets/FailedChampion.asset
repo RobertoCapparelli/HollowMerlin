@@ -956,6 +956,23 @@ MonoBehaviour:
   isOpen: 1
   _event: {fileID: 5604293615211419012}
   parameter: {fileID: 0}
+--- !u!114 &-1669380742925754501
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6221eae08e534b42b281da6a02edeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: 
 --- !u!114 &-1500438014067163113
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1165,13 +1182,13 @@ MonoBehaviour:
   - {fileID: -7032431257895673119}
   - {fileID: 97277027340538529}
   - {fileID: 3337995589962111068}
+  - {fileID: 4228531243410744956}
   nodes:
   - {fileID: 4408310793244140716}
   - {fileID: -4110423310111605405}
   - {fileID: 2678285866728408122}
   - {fileID: 6697920924297479924}
   - {fileID: -2291416255573566368}
-  - {fileID: 7544819696474948936}
 --- !u!114 &97277027340538529
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1697,6 +1714,50 @@ MonoBehaviour:
   name: JumpForce
   group: Default
   value: 0
+--- !u!114 &4228531243410744956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466dbf307f9a4f341a279b086007e907, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: test
+  group: 
+  variableName: 
+  type: 0
+  boolValue: 0
+  floatValue: 0
+  gameObjectValue: {fileID: 0}
+  intValue: 0
+  uIntValue: 0
+  stringValue: 
+  vector2Value: {x: 0, y: 0}
+  vector3Value: {x: 0, y: 0, z: 0}
+--- !u!114 &4248423115344206179
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &4408310793244140716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1862,6 +1923,32 @@ MonoBehaviour:
   group: Default
   value: {fileID: 0}
   scenePath: 
+--- !u!114 &6072336955949638374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466dbf307f9a4f341a279b086007e907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: test
+  group: 
+  variableName: 
+  type: 0
+  boolValue: 0
+  floatValue: 0
+  gameObjectValue: {fileID: 0}
+  intValue: 0
+  uIntValue: 0
+  stringValue: 
+  vector2Value: {x: 0, y: 0}
+  vector3Value: {x: 0, y: 0, z: 0}
 --- !u!114 &6128715322263411512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1970,8 +2057,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25223
-    y: 25164
+    x: 25224
+    y: 25167
     width: 150
     height: 45
   color: 1
@@ -2104,33 +2191,6 @@ MonoBehaviour:
   name: IdleTime
   group: Default
   value: 0
---- !u!114 &7544819696474948936
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7f47e6ef9b75e439c8ccfb10d6fdf0, type: 3}
-  m_Name: State 0
-  m_EditorClassIdentifier: 
-  position:
-    serializedVersion: 2
-    x: 25286
-    y: 25276
-    width: 150
-    height: 30
-  color: 0
-  comment: 
-  time: 0
-  name: State 0
-  isStartNode: 0
-  parent: {fileID: 11400000}
-  transitions: []
-  isSequence: 0
-  actions: []
 --- !u!114 &7645968217797810358
 MonoBehaviour:
   m_ObjectHideFlags: 1

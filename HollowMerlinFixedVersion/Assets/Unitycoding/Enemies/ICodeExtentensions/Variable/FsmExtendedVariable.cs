@@ -29,7 +29,7 @@ namespace ICode
             get { return typeof(Type); }
         }
 
-        [SerializeField]
+    [SerializeField]
         private bool boolValue;
         [SerializeField]
         private float floatValue;
@@ -137,4 +137,4 @@ namespace ICode
             return GetFsmValue();
         }
     }
-}
+    }

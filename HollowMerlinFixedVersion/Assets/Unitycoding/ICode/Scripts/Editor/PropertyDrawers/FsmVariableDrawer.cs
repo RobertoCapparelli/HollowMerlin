@@ -121,8 +121,25 @@ namespace ICode.FSMEditor{
 			List<string> strs = new List<string> (){
 				"None"
 			};
-			
-			for (int i = 0; i < variables.Length; i++)
+
+			if(variable is FsmExtendedVariable)
+			{
+                for (int i = 0; i < variables.Length; i++)
+                {
+                    if (variable == null || variable.GetType() == variables[i].GetType()) // Check for FsmExtendedVariable type
+                    {
+                        strs.Add(variables[i].Name); // Use VariableName from FsmExtendedVariable
+                        if (variable != null && variables[i].Name.Equals(variable.Name))
+                        {
+                            count = strs.Count - 1;
+                        }
+                    }
+                }
+                names = strs.ToArray();
+                return count;
+            }
+
+            for (int i = 0; i < variables.Length; i++)
 			{
 				Type propertyType = variables[i].GetType().GetProperty("Value").PropertyType;
 				if (variable == null || propertyType.Equals(variable.GetType().GetProperty("Value").PropertyType))
@@ -134,7 +151,7 @@ namespace ICode.FSMEditor{
 					}
 				}
 			}
-			names = strs.ToArray();
+            names = strs.ToArray();
 			return count;
 		}
 
@@ -154,7 +171,9 @@ namespace ICode.FSMEditor{
 				AssetDatabase.AddObjectToAsset (variable, property.serializedObject.targetObject);
 				AssetDatabase.SaveAssets ();
 			}
-			variable.IsShared = fieldInfo.HasAttribute (typeof(SharedAttribute)) || EditorUtility.IsPersistent (variable) && fieldInfo.HasAttribute (typeof(SharedPersistentAttribute)) || fieldInfo.FieldType == typeof(FsmArray);
+			variable.IsShared = fieldInfo.HasAttribute (typeof(SharedAttribute)) || 
+								EditorUtility.IsPersistent (variable) && fieldInfo.HasAttribute (typeof(SharedPersistentAttribute)) ||
+								fieldInfo.FieldType == typeof(FsmArray);
 			property.objectReferenceValue = variable;
 			property.serializedObject.ApplyModifiedProperties ();
 			ErrorChecker.CheckForErrors();

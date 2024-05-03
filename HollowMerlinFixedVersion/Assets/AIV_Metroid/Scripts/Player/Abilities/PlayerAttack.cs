@@ -1,4 +1,5 @@
 using AIV_Metroid_Player;
+using Codice.Client.Common.GameUI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +9,11 @@ using UnityEngine.UIElements;
 
 public class PlayerAttack : PlayerAbilityBase
 {
-    private const string attackAnimatorString = "Attack";
+    /*C'è un problema nella parte grafica, viene chiamato prima l'input e poi l'OnTriggerEnter, quidi la variabile per settare se il colpo è andato a segno o meno
+     *viene settata dopo la chiamata all'animator! 
+     */
+    private const string attackNoHitAnimatorString = "AttackNoHit";
+    private const string attackHitAnimatorString = "AttackHit";
 
     #region Field
 
@@ -19,16 +24,14 @@ public class PlayerAttack : PlayerAbilityBase
     [SerializeField]
     private float attackCooldown;
     [SerializeField]
-    private float bounceForce;
+    private BoxCollider2D attackCollider;
+    [SerializeField]
+    private Animator animator;
+   [SerializeField]
+    private Vector3 offset = new Vector3(2.5f, 0, 0);
 
     private bool canAttack;
-
-    protected BoxCollider2D attackCollider;
-    protected Animator animator;
-
-    [SerializeField]
-    Vector3 offset = new Vector3(2.5f, 0, 0);
-
+    private bool hit;
 
     #endregion
 
@@ -37,16 +40,9 @@ public class PlayerAttack : PlayerAbilityBase
     protected void OnEnable()
     {
         InputManager.Player.Attack.performed += OnInputPerform;
-        attackCollider = gameObject.GetComponent<BoxCollider2D>();
-        animator = gameObject.GetComponent<Animator>();
-
 
         attackCollider.enabled = false;
         canAttack = true;
-    }
-    protected void FixedUpdate()
-    {
-
     }
     protected void OnTriggerEnter2D(Collider2D other)
     {
@@ -69,50 +65,31 @@ public class PlayerAttack : PlayerAbilityBase
         GetDirectionAttack();
 
         attackCollider.enabled = true;
+        
         StartCoroutine(WaitForAttackCooldown());
 
-        //Visual
-        //animator.transform.SetPositionAndRotation(attackCollider.transform.localPosition, attackCollider.transform.rotation);
-
-        SetAnimationParameter("FireAttack");
+        SetAnimationParameter(attackHitAnimatorString, attackNoHitAnimatorString);
 
     }
 
-    private void GetDirectionAttack(float a)
-    {
-        gameObject.transform.SetPositionAndRotation(playerController.transform.position +
-                                        (gameObject.transform.forward.x > 0 ? offset : -offset), Quaternion.identity);
-
-
-
-        float verticalDirection = InputManager.Player_Vertical;
-
-        if (verticalDirection == 0) return;
-
-        float horizontalDirection = InputManager.Player_Horizontal;
-
-        if (playerController.ComputedDirection.y < 0)
-        {
-            gameObject.transform.RotateAround(gameObject.transform.position - offset, Vector3.forward, 90);
-
-        }
-        else
-        {
-            gameObject.transform.RotateAround(gameObject.transform.position - offset, Vector3.forward, -90);
-        }
-
-
-    }
     private void GetDirectionAttack()
     {
         Vector3 resultOffset = playerController.transform.forward.x >= 0 ? offset : -offset;
-        gameObject.transform.position = playerController.transform.position + resultOffset;
-        gameObject.transform.rotation = Quaternion.identity;
+        gameObject.transform.SetPositionAndRotation(playerController.transform.position + resultOffset,
+                                                    playerController.transform.rotation);
 
         float verticalDirection = InputManager.Player_Vertical;
         if (verticalDirection == 0) return;
 
-        gameObject.transform.position = playerController.transform.position + offset;
+        /*
+         * Risetto il pivot della rotazione nello stesso punto per il colpo in verticale per semplificare i calcoli
+         * infatti mettiamo caso che il player sia girato verso destra e debba colpire in alto, allora la rotazione da fare sarebbe di 90 gradi, ma se fosse girato
+         * a sinistra allora la rotazione dovrebbe essere di -90, questo sia per l'alto che il basso
+
+        */
+        gameObject.transform.SetPositionAndRotation(playerController.transform.position + offset,
+                                                    Quaternion.identity);
+
         if (verticalDirection < 0.0)
         {
             gameObject.transform.RotateAround(playerController.transform.position, Vector3.forward, -90);
@@ -134,13 +111,11 @@ public class PlayerAttack : PlayerAbilityBase
         IDamageble damageable = other.GetComponent<IDamageble>();
         if (damageable == null) return;
 
+        hit = true;
 
         Vector3 hitPosition = other.ClosestPoint(transform.position);
         damageContainer.SetContactPoint(hitPosition);
         damageable.TakeDamage(damageContainer);
-
-
-
         /*  
          * Ho provato ad aggiungere un impulso al player che quando colpisce un environment ha una forza nella direzione opposta al colpo,
          * però il player si sposta solo sull'asse y, ho testato sia con la velocity sia con l'impulso, anche inserendo il vector.up (come abbiamo
@@ -152,20 +127,7 @@ public class PlayerAttack : PlayerAbilityBase
         
         playerController.SetImpulse(hitDirection.normalized * bounceForce); */
 
-
         canAttack = false;
-
-
-    }
-    #endregion
-
-    #region Coroutine
-
-    IEnumerator WaitForAttackCooldown()
-    {
-        yield return new WaitForSeconds(attackCooldown); // Wait for attack cooldown duration
-        attackCollider.enabled = false;
-        canAttack = true;
     }
     #endregion
 
@@ -188,11 +150,26 @@ public class PlayerAttack : PlayerAbilityBase
 
     #endregion
 
-    #region Visual
-    private void SetAnimationParameter(string name)
-    {
-        animator.SetTrigger(Animator.StringToHash(name));
+    #region Coroutine
 
+    IEnumerator WaitForAttackCooldown()
+    {
+        yield return new WaitForSeconds(attackCooldown);
+        attackCollider.enabled = false;
+        canAttack = true;
+    }
+    #endregion
+
+    #region Visual
+    private void SetAnimationParameter(string attackHit, string attackNoHit)
+    {
+        if (hit)
+        {
+            animator.SetTrigger(Animator.StringToHash(attackHit));
+
+        } else animator.SetTrigger(Animator.StringToHash(attackNoHit));
+
+        hit = false;
     }
     #endregion
 
