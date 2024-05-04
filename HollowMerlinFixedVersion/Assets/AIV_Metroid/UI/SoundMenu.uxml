@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: column; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 50px;">
+        <ui:VisualElement name="Master" style="flex-grow: 1; width: 100%; height: 33%;">
+            <ui:Label tabindex="-1" text="Master" parse-escape-sequences="true" display-tooltip-when-elided="true" name="text" style="width: 50%; height: 50%; flex-shrink: 0; flex-grow: 0; font-size: 100%;" />
+            <ui:Slider high-value="100" name="MasterSlider" show-input-field="true" inverted="false" style="width: 50%; visibility: visible; overflow: visible;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="SoundFX" style="flex-grow: 1; width: 100%; height: 33%;">
+            <ui:Label tabindex="-1" text="Sound FX" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 100%;" />
+            <ui:Slider high-value="100" name="SoundFXSlider" style="width: 50%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Music" style="flex-grow: 1; width: 100%; height: 33%;">
+            <ui:Label tabindex="-1" text="Music" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 100%;" />
+            <ui:Slider high-value="100" name="MusicSlider" style="width: 50%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
