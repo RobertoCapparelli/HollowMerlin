@@ -48,6 +48,10 @@ MonoBehaviour:
   speed: 10
   totalSeconds: 0.3
   maxAeralDash: 2
+  dashAudio:
+  - {fileID: 8300000, guid: 3eb98c8fb490a9d4282c5d4290b2ace2, type: 3}
+  - {fileID: 8300000, guid: e878dfd4b9fda3d4c986b2005a3a622d, type: 3}
+  - {fileID: 8300000, guid: 381bf07525cdea54cb9134aa36b71874, type: 3}
 --- !u!1 &2237105544603013415
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +373,17 @@ MonoBehaviour:
     damageImpulse: {x: 0, y: 0, z: 0}
     freezeTime: 0
   attackCooldown: 0
+  attackCollider: {fileID: 0}
+  animator: {fileID: 0}
+  offset: {x: 2.5, y: 0, z: 0}
+  attackNoHitAudio:
+  - {fileID: 8300000, guid: a1291a7b0f409b74cb26a5add96e2655, type: 3}
+  - {fileID: 8300000, guid: 631b63f5d188923469a849926ac66e1e, type: 3}
+  - {fileID: 8300000, guid: 19fd673c795de6747ad137f96af1c49e, type: 3}
+  attackHitAudio:
+  - {fileID: 8300000, guid: 6622b80ba3f50f14c861bd66cc9c5727, type: 3}
+  - {fileID: 8300000, guid: c75baf5197705a7428a03a078b98961c, type: 3}
+  - {fileID: 8300000, guid: adeda330bba9f3048ba6b575f2f1550e, type: 3}
 --- !u!1 &3845734635222334301
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,6 +734,10 @@ MonoBehaviour:
     m_RotationOrder: 4
   consecutiveJump: 2
   consecutiveJumpDelay: 0.02
+  jumpAudio:
+  - {fileID: 8300000, guid: c4839637a5d010a46bd94adbe0a51a9c, type: 3}
+  - {fileID: 8300000, guid: 4ae85a32e717a854586915fbf3f58a48, type: 3}
+  - {fileID: 8300000, guid: fd614538ff5ab284a841431204799903, type: 3}
 --- !u!1 &6488260442975710753
 GameObject:
   m_ObjectHideFlags: 0

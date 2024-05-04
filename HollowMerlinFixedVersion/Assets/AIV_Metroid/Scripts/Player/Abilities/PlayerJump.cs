@@ -1,3 +1,4 @@
+using Codice.CM.SEIDInfo;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -24,6 +25,8 @@ namespace AIV_Metroid_Player {
         protected int consecutiveJump;
         [SerializeField]
         protected float consecutiveJumpDelay;
+        [SerializeField]
+        protected AudioClip[] jumpAudio;
         #endregion
 
         protected int currentConsecutiveJump;
@@ -72,6 +75,8 @@ namespace AIV_Metroid_Player {
                 StopCoroutine(jumpCoroutine);
             }
             jumpCoroutine = StartCoroutine(JumpCoroutine());
+            SoundMenager.instance.PlayRandomSoundFXClip(jumpAudio, transform, 0.6f);
+            
         }
         #endregion
 

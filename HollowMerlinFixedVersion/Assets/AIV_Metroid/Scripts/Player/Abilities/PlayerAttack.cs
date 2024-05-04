@@ -27,8 +27,14 @@ public class PlayerAttack : PlayerAbilityBase
     private BoxCollider2D attackCollider;
     [SerializeField]
     private Animator animator;
-   [SerializeField]
+    [SerializeField]
     private Vector3 offset = new Vector3(2.5f, 0, 0);
+    [SerializeField]
+    private AudioClip[] attackNoHitAudio;
+    [SerializeField]
+    private AudioClip[] attackHitAudio;
+
+
 
     private bool canAttack;
     private bool hit;
@@ -65,7 +71,9 @@ public class PlayerAttack : PlayerAbilityBase
         GetDirectionAttack();
 
         attackCollider.enabled = true;
-        
+
+        SoundMenager.instance.PlayRandomSoundFXClip(attackNoHitAudio, transform, 0.5f);
+
         StartCoroutine(WaitForAttackCooldown());
 
         SetAnimationParameter(attackHitAnimatorString, attackNoHitAnimatorString);
@@ -112,6 +120,8 @@ public class PlayerAttack : PlayerAbilityBase
         if (damageable == null) return;
 
         hit = true;
+
+        SoundMenager.instance.PlayRandomSoundFXClip(attackHitAudio, transform, 0.8f);
 
         Vector3 hitPosition = other.ClosestPoint(transform.position);
         damageContainer.SetContactPoint(hitPosition);

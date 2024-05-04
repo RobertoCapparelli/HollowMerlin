@@ -22,6 +22,7 @@ namespace AIV_Metroid_Player {
         protected Transform cameraPositionTransform;
         [SerializeField]
         protected PlayerVisual playerVisual;
+
         #endregion //References
 
         #region PrivateAttributes

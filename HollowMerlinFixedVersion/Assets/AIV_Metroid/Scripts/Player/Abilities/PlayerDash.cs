@@ -15,6 +15,8 @@ namespace AIV_Metroid_Player {
         protected float totalSeconds;
         [SerializeField]
         protected int maxAeralDash;
+        [SerializeField]
+        protected AudioClip[] dashAudio;
 
         protected int currentAeralDash;
         protected Coroutine dashCoroutine;
@@ -68,6 +70,7 @@ namespace AIV_Metroid_Player {
 
         public void StartDash () {
             dashCoroutine = StartCoroutine(DashCoroutine());
+            SoundMenager.instance.PlayRandomSoundFXClip(dashAudio, transform, 0.6f);
         }
 
         #region Callbacks

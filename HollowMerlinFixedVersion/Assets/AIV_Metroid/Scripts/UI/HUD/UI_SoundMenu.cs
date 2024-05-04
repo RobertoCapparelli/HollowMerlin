@@ -7,6 +7,11 @@ using UnityEngine.UIElements;
 
 public class UI_SoundMenu : MonoBehaviour
 {
+    /*Non funziona perchè non c'è l'input del mouse nell'input system
+     * 
+     * TODO: Aggiungere il mouse nel nuovo sistema di input.
+     */
+
 
     [SerializeField] private UIDocument UIDocument;
 
@@ -24,12 +29,12 @@ public class UI_SoundMenu : MonoBehaviour
         SoundFXSlider = root.Q<Slider>("SoundFXSlider");
         MusicSlider = root.Q<Slider>("MusicSlider");
 
-        // Trova il dragger degli slider anziché gli slider stessi
+        
         VisualElement masterDragger = MasterSlider.Q("unity-dragger");
         VisualElement soundFXDragger = SoundFXSlider.Q("unity-dragger");
         VisualElement musicDragger = MusicSlider.Q("unity-dragger");
 
-        // Registra callback per l'evento DragUpdatedEvent sui dragger
+        
         masterDragger.RegisterCallback<DragUpdatedEvent>(evt => OnSliderDragUpdated(MasterSlider));
         soundFXDragger.RegisterCallback<DragUpdatedEvent>(evt => OnSliderDragUpdated(SoundFXSlider));
         musicDragger.RegisterCallback<DragUpdatedEvent>(evt => OnSliderDragUpdated(MusicSlider));
@@ -47,9 +52,6 @@ public class UI_SoundMenu : MonoBehaviour
 
     private void OnSliderDragUpdated(Slider slider)
     {
-        // Aggiorna il volume dell'audio in base al valore dello slider
-        float volume = slider.value;
-        Debug.Log(slider.name + " slider value changed to: " + volume);
-        // Qui potresti utilizzare il valore del volume per regolare l'audio
+        
     }
 }
