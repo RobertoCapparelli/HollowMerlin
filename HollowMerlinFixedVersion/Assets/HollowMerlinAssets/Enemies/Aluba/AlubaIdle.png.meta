@@ -116,9 +116,9 @@ TextureImporter:
         x: 3
         y: 409
         width: 402
-        height: 197
+        height: 165
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: AlubaIdle_1
       rect:
         serializedVersion: 2
-        x: 409
+        x: 410
         y: 409
-        width: 402
-        height: 197
+        width: 401
+        height: 153
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: AlubaIdle_2
       rect:
         serializedVersion: 2
-        x: 815
+        x: 817
         y: 409
-        width: 402
-        height: 197
+        width: 400
+        height: 153
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: AlubaIdle_3
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 409
-        width: 402
-        height: 197
+        x: 1222
+        y: 408
+        width: 401
+        height: 153
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: AlubaIdle_4
       rect:
         serializedVersion: 2
-        x: 3
+        x: 7
         y: 207
-        width: 402
-        height: 197
+        width: 398
+        height: 195
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: AlubaIdle_5
       rect:
         serializedVersion: 2
-        x: 409
-        y: 207
-        width: 402
+        x: 411
+        y: 206
+        width: 400
         height: 197
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: AlubaIdle_6
       rect:
         serializedVersion: 2
-        x: 815
+        x: 822
         y: 207
-        width: 402
-        height: 197
+        width: 395
+        height: 195
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: AlubaIdle_7
       rect:
         serializedVersion: 2
-        x: 1221
+        x: 1226
         y: 207
-        width: 402
-        height: 197
+        width: 397
+        height: 196
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: AlubaIdle_8
       rect:
         serializedVersion: 2
-        x: 3
+        x: 7
         y: 5
-        width: 402
-        height: 197
+        width: 398
+        height: 194
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,12 +302,12 @@ TextureImporter:
       name: AlubaIdle_9
       rect:
         serializedVersion: 2
-        x: 409
-        y: 5
-        width: 402
-        height: 197
+        x: 415
+        y: 4
+        width: 396
+        height: 195
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,12 +323,12 @@ TextureImporter:
       name: AlubaIdle_10
       rect:
         serializedVersion: 2
-        x: 815
+        x: 821
         y: 5
-        width: 402
-        height: 197
+        width: 396
+        height: 193
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,12 +344,12 @@ TextureImporter:
       name: AlubaIdle_11
       rect:
         serializedVersion: 2
-        x: 1221
+        x: 1224
         y: 5
-        width: 402
-        height: 197
+        width: 399
+        height: 195
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

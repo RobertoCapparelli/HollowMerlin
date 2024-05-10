@@ -208,4 +208,15 @@ public class GroundMovement : MonoBehaviour, IEnemyMovement {
             ChangeYRotation();
         }
     }
+
+    public void SetVerticalMovement(float speed, float amplitude)
+    {
+       
+    }
+
+    public void Die()
+    {
+        SetMovementSpeed(0);
+        status = GroundEnemyControllerStatus.dying;
+    }
 }

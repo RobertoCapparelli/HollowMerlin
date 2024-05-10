@@ -17,7 +17,7 @@ public class OverXPositionCondition : Condition
     public override bool Validate() {
         Vector3 localTargetPosition = owner.Value.transform.
             InverseTransformPoint(target.Value.transform.position);
-        return localTargetPosition.x < 0;
+        return localTargetPosition.x < 0.1;
     }
 
 }

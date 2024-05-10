@@ -41,7 +41,9 @@ public class EnemyComponent : MonoBehaviour, IDamager, IDamageble
     private void Awake()
     {
         codeBehaviour = GetComponent<ICodeBehaviour>();
+
         animator = GetComponent<Animator>();
+
         CreateEnemyMovement();
         foreach (EnemyCollider collider in meleeColliders)
         {
@@ -65,6 +67,11 @@ public class EnemyComponent : MonoBehaviour, IDamager, IDamageble
         set;
     }
 
+    public bool isDead
+    {
+        get { return healthModule.IsDead; }
+    }
+
     public void ResetHealth()
     {
         healthModule.Reset();
@@ -77,9 +84,11 @@ public class EnemyComponent : MonoBehaviour, IDamager, IDamageble
 
         attackCount++;
 
+        if (isDead) return;
+
         if (attackCount >= AttackForMakeVulnerable)
         {
-            IsVulnerable = true; 
+            IsVulnerable = true;
             StartCoroutine(VulnerableCoroutine());
         }
 
@@ -98,9 +107,10 @@ public class EnemyComponent : MonoBehaviour, IDamager, IDamageble
 
     public void InternalOnDeath()
     {
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
     #endregion
+
 
     public void ResetMe()
     {
@@ -192,10 +202,24 @@ public class EnemyComponent : MonoBehaviour, IDamager, IDamageble
     {
         movementComponent.Die(dieForce, sourcePosition);
     }
+    public void Die()
+    {
+        movementComponent.Die();
+
+        foreach(EnemyHittableCollider collider in bodyColliders)
+        {
+            collider.Collider.enabled = false;
+        }
+    }
 
     public void Teleport(Vector3 position)
     {
         movementComponent.Teleport(position);
+    }
+
+    public void SetVerticalMovement(float speed, float amplitude)
+    {
+        movementComponent.SetVerticalMovement(speed, amplitude);
     }
 
     public Vector2 InputDirection

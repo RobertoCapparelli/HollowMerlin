@@ -1,4 +1,5 @@
 
+using ICode.Actions.UnityRigidbody2D;
 using UnityEngine;
 
 public enum FlyEnemyControllerStatus
@@ -12,7 +13,6 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
 {
     #region Private_Attributes
 
-    private float maxFlyingSpeed = 10;
 
     protected Rigidbody2D myRigidbody;
     private BoxCollider2D myCollider;
@@ -23,21 +23,18 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
     private Vector2 preHitVelocity;
     private FlyEnemyControllerStatus status;
 
-    private float verticalMovementRange = 2.0f; // Range for random vertical movement
-    private float maxVerticalSpeed = 2.0f; // Maximum vertical speed
 
-    private Animator myAnimator;
     #endregion
-
-    private float HitForce = 0;
 
     #region Properties
 
     public float MovementSpeed { get { return movementSpeed; } set { if (value < 0) { movementSpeed = 0; return; } movementSpeed = value; } }
     public Vector2 InputDirection { get { return inputDirection; } }
-    public float MaxFlyingSpeed { get { return maxFlyingSpeed; } set { maxFlyingSpeed = value; } }
-    public bool FaceDirection { get; private set; } // If applicable for flying enemies
+    public bool FaceDirection { get; private set; } 
     public bool IsGrounded { get { return false; } }
+
+    public float Speed { get; set; }
+    public float Amplitude { get; set; }
 
     #endregion
 
@@ -46,19 +43,19 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myCollider = GetComponentInChildren<BoxCollider2D>();
-        myAnimator = GetComponent<Animator>();
         ResetMe();
     }
 
     private void FixedUpdate()
+    {     
+        if (status == FlyEnemyControllerStatus.dead) return;
+        SetYMovementByWave();
+    }
+
+    private void SetYMovementByWave()
     {
-        switch (status)
-        {
-            case FlyEnemyControllerStatus.dying:
-                Die(Vector3.zero, Vector3.zero);
-                break;
-        }
-        //IncreaseFallSpeed();
+        float yMovement = Amplitude * Mathf.Sin(Time.time * Speed);
+        myRigidbody.velocity += new Vector2(0, yMovement);
     }
 
 
@@ -79,10 +76,7 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
 
     public void SetInputDirection(Vector2 inputDirection)
     {
-        float airBuoyancyForce = 1.5f;
-
         this.inputDirection = inputDirection.normalized;
-
         Vector2 performedVelocity = PerformedVelocity(this.inputDirection);
         switch (status)
         {
@@ -90,45 +84,35 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
                 preHitVelocity = performedVelocity;
                 break;
             case FlyEnemyControllerStatus.moving:
-
                 myRigidbody.velocity = performedVelocity;
-
-                // Add a slight upward force to simulate air buoyancy (optional)
-                myRigidbody.AddForce(Vector2.up * airBuoyancyForce);
                 if (FaceDirection)
                 {
                     ChangeYRotation();
                 }
                 break;
             case FlyEnemyControllerStatus.dead:
-                // Stop movement entirely (optional: handle falling physics)
-                myRigidbody.velocity = Vector2.zero;
+                if (inputDirection == Vector2.zero)
+                {
+                    myRigidbody.velocity = performedVelocity;
+                }
                 break;
         }
     }
+
     protected virtual Vector2 PerformedVelocity(Vector2 direction)
     {
-        // Calculate horizontal velocity based on input direction and movement speed
-        float horizontalVelocity = inputDirection.x * movementSpeed;
-        
-
-        // Introduce random variation for vertical velocity
-        float randomVerticalVelocity = Random.Range(-verticalMovementRange, verticalMovementRange);
-        //float verticalVelocity = (myRigidbody.velocity.y + randomVerticalVelocity) + (inputDirection.y * movementSpeed);
-        float verticalVelocity = inputDirection.y * movementSpeed;
-
-        // Clamp vertical velocity to avoid excessive bouncing
-        //verticalVelocity = Mathf.Clamp(verticalVelocity, -maxVerticalSpeed, maxVerticalSpeed);
-
-        // Return the modified velocity
-        return new Vector2(horizontalVelocity, verticalVelocity);
+        return new Vector2(inputDirection.x * movementSpeed, 0);
     }
 
+    public void SetVerticalMovement(float speed, float amplitude)
+    {
+        Speed = speed;
+        Amplitude = amplitude;
+
+
+    }
     private void ChangeYRotation()
     {
-        /* if (inputDirection.x == 0 || movementSpeed == 0) return;
-        myAnimator.SetTrigger("Turn");
-        */
         Vector3 eulerRotation = transform.eulerAngles;
         eulerRotation.y = inputDirection.x < 0 ? 180 : 0;
         transform.eulerAngles = eulerRotation;
@@ -160,7 +144,17 @@ public class FlyMovement : MonoBehaviour, IEnemyMovement
 
     public void Die(Vector2 dieForce, Vector3 sourcePosition)
     {
-        throw new System.NotImplementedException();
+
+    }
+
+    public void Die()
+    {
+        SetMovementSpeed(0);
+        myRigidbody.gravityScale = 3;
+        status = FlyEnemyControllerStatus.dead;
+
+        
+        
     }
 
     public void Teleport(Vector3 position)

@@ -17,7 +17,10 @@ public interface IEnemyMovement
     void SetFaceDirection(bool value);
     void Hitted(Vector2 hitForce, Vector3 sourcePosition);
     void Die(Vector2 dieForce, Vector3 sourcePosition);
+    void Die();
     void Teleport(Vector3 position);
+    void SetVerticalMovement(float speed, float amplitude);
+
 
     Vector2 InputDirection {
         get;

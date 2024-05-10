@@ -68,6 +68,24 @@ MonoBehaviour:
   name: Attack_CD
   group: Default
   value: 4
+--- !u!114 &-8304818454971960182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &-7487689244097858807
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,7 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25228.94
+    x: 25231.94
     y: 25119.047
     width: 150
     height: 45
@@ -378,8 +396,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25229.18
-    y: 24997.768
+    x: 25231.18
+    y: 24999.768
     width: 150
     height: 30
   color: 5
@@ -629,8 +647,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enabled: 1
   isOpen: 1
-  gameObject: {fileID: 6059427410648533522}
-  inputDirection: {fileID: 2842510457014223224}
+  Owner: {fileID: -8304818454971960182}
+  Target: {fileID: 6897467780038856163}
   everyFrame: {fileID: -8964077017051912662}
 --- !u!114 &1777765860540802623
 MonoBehaviour:
@@ -893,6 +911,24 @@ MonoBehaviour:
   name: DistanceToLeaveAttack
   group: Default
   value: 0
+--- !u!114 &6897467780038856163
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &7130231932188339223
 MonoBehaviour:
   m_ObjectHideFlags: 1
