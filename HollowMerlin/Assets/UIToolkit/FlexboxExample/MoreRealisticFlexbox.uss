@@ -1,5 +1,0 @@
-.menu_o {
-    width: 200px;
-    flex-shrink: 0;
-    height: 50px;
-}

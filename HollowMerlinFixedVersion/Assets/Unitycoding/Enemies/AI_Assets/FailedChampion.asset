@@ -17,6 +17,35 @@ MonoBehaviour:
   mute: 0
   conditions:
   - {fileID: -3986914968699850791}
+--- !u!114 &-8872173094415136399
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed7f47e6ef9b75e439c8ccfb10d6fdf0, type: 3}
+  m_Name: Death
+  m_EditorClassIdentifier: 
+  position:
+    serializedVersion: 2
+    x: 24798
+    y: 24941
+    width: 150
+    height: 30
+  color: 0
+  comment: 
+  time: 0
+  name: Death
+  isStartNode: 0
+  parent: {fileID: 6697920924297479924}
+  transitions: []
+  isSequence: 0
+  actions:
+  - {fileID: -6762516459732263659}
+  - {fileID: 5689796250663538760}
 --- !u!114 &-8482983222747261868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -164,6 +193,21 @@ MonoBehaviour:
   gameObject: {fileID: -2714792292750641482}
   movementSpeed: {fileID: 5701664208032745370}
   everyFrame: {fileID: 6469587028529839988}
+--- !u!114 &-6762516459732263659
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657b15631748fc746ac1f0e972a44827, type: 3}
+  m_Name: EnemyMovement.SetEnemyDie
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  gameObject: {fileID: 4467449191635811249}
 --- !u!114 &-6600505415903487150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -429,7 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25363.445
+    x: 25364.445
     y: 25063.996
     width: 150
     height: 30
@@ -458,8 +502,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25220.098
-    y: 24991.678
+    x: 25219.098
+    y: 24992.678
     width: 150
     height: 45
   color: 5
@@ -588,6 +632,23 @@ MonoBehaviour:
   isOpen: 1
   _event: {fileID: -4893983387986389751}
   parameter: {fileID: 0}
+--- !u!114 &-3558640253018875379
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6221eae08e534b42b281da6a02edeb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 0
+  name: None
+  group: Default
+  value: Death
 --- !u!114 &-3433513065765939600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -674,6 +735,23 @@ MonoBehaviour:
   mute: 0
   conditions:
   - {fileID: -3558808948519888999}
+--- !u!114 &-3261291805134929740
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62c9e419f86a34748948479c8e6d347f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toNode: {fileID: -8872173094415136399}
+  fromNode: {fileID: 1567355758476278384}
+  mute: 0
+  conditions:
+  - {fileID: 6701514324181907021}
 --- !u!114 &-3060184099596512087
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -895,34 +973,6 @@ MonoBehaviour:
   gameObject: {fileID: -3952619032502393689}
   parameter: {fileID: 8809124264844921150}
   everyFrame: 0
---- !u!114 &-2291416255573566368
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed7f47e6ef9b75e439c8ccfb10d6fdf0, type: 3}
-  m_Name: README
-  m_EditorClassIdentifier: 
-  position:
-    serializedVersion: 2
-    x: 25429
-    y: 24944
-    width: 150
-    height: 30
-  color: 0
-  comment: "Essendo  un progetto per l'esame ho preferito concentrarmi\nsu diversi
-    elementi al posto di creare una FSM troppo \ncomplessa"
-  time: 0
-  name: README
-  isStartNode: 0
-  parent: {fileID: 11400000}
-  transitions: []
-  isSequence: 0
-  actions: []
 --- !u!114 &-2253511554413528534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1038,8 +1088,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25295.783
-    y: 25121.674
+    x: 25290.783
+    y: 25123.674
     width: 150
     height: 30
   color: 0
@@ -1182,13 +1232,11 @@ MonoBehaviour:
   - {fileID: -7032431257895673119}
   - {fileID: 97277027340538529}
   - {fileID: 3337995589962111068}
-  - {fileID: 4228531243410744956}
   nodes:
   - {fileID: 4408310793244140716}
   - {fileID: -4110423310111605405}
   - {fileID: 2678285866728408122}
   - {fileID: 6697920924297479924}
-  - {fileID: -2291416255573566368}
 --- !u!114 &97277027340538529
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1376,8 +1424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25063.545
-    y: 24936.463
+    x: 25066.545
+    y: 24938.463
     width: 150
     height: 30
   color: 0
@@ -1388,6 +1436,7 @@ MonoBehaviour:
   parent: {fileID: 6697920924297479924}
   transitions:
   - {fileID: 1871501418788159486}
+  - {fileID: -3261291805134929740}
   isSequence: 0
   actions:
   - {fileID: -2617778028910234177}
@@ -1560,7 +1609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25229.168
+    x: 25225.168
     y: 25087.64
     width: 150
     height: 30
@@ -1714,32 +1763,6 @@ MonoBehaviour:
   name: JumpForce
   group: Default
   value: 0
---- !u!114 &4228531243410744956
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 466dbf307f9a4f341a279b086007e907, type: 3}
-  m_Name: test
-  m_EditorClassIdentifier: 
-  isHidden: 0
-  isShared: 1
-  name: test
-  group: 
-  variableName: 
-  type: 0
-  boolValue: 0
-  floatValue: 0
-  gameObjectValue: {fileID: 0}
-  intValue: 0
-  uIntValue: 0
-  stringValue: 
-  vector2Value: {x: 0, y: 0}
-  vector3Value: {x: 0, y: 0, z: 0}
 --- !u!114 &4248423115344206179
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1785,6 +1808,24 @@ MonoBehaviour:
   transitions: []
   isSequence: 0
   actions: []
+--- !u!114 &4467449191635811249
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &4582342139660212617
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1888,6 +1929,23 @@ MonoBehaviour:
   name: None
   group: Default
   value: Jump
+--- !u!114 &5689796250663538760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ad62077ce829d04c8fbafa35bc0f331, type: 3}
+  m_Name: Animator.SetTrigger
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  gameObject: {fileID: 6959686808141522883}
+  parameter: {fileID: -3558640253018875379}
+  everyFrame: 0
 --- !u!114 &5701664208032745370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1949,6 +2007,24 @@ MonoBehaviour:
   stringValue: 
   vector2Value: {x: 0, y: 0}
   vector3Value: {x: 0, y: 0, z: 0}
+--- !u!114 &6098873464031818881
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &6128715322263411512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1963,8 +2039,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 24759
-    y: 24939
+    x: 24770
+    y: 25079
     width: 150
     height: 30
   color: 2
@@ -2058,7 +2134,7 @@ MonoBehaviour:
   position:
     serializedVersion: 2
     x: 25224
-    y: 25166
+    y: 25165
     width: 150
     height: 45
   color: 1
@@ -2076,6 +2152,22 @@ MonoBehaviour:
   - {fileID: -4129208179950242351}
   - {fileID: -7478583782326734538}
   - {fileID: -4095234394460348002}
+  - {fileID: -8872173094415136399}
+--- !u!114 &6701514324181907021
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe56afebe02c754d900deac0bc57c51, type: 3}
+  m_Name: EnemyComponent.isDeath
+  m_EditorClassIdentifier: 
+  enabled: 1
+  isOpen: 1
+  owner: {fileID: 6098873464031818881}
 --- !u!114 &6818907834522727089
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2093,6 +2185,24 @@ MonoBehaviour:
   name: None
   group: Default
   value: {x: 0, y: 0}
+--- !u!114 &6959686808141522883
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb277f6959ac73745a8dcde1fff07e7d, type: 3}
+  m_Name: Owner
+  m_EditorClassIdentifier: 
+  isHidden: 0
+  isShared: 1
+  name: Owner
+  group: Default
+  value: {fileID: 0}
+  scenePath: 
 --- !u!114 &7033065946883083024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2142,8 +2252,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
-    x: 25291.434
-    y: 24997.166
+    x: 25289.434
+    y: 24998.166
     width: 150
     height: 30
   color: 5

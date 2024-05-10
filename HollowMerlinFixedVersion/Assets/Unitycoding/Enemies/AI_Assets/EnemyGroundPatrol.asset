@@ -700,7 +700,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c16a3faa3edd0ae4aa7bb254ef5b7efe, type: 3}
-  m_Name: EnemyPatrol
+  m_Name: EnemyGroundPatrol
   m_EditorClassIdentifier: 
   position:
     serializedVersion: 2
@@ -711,7 +711,7 @@ MonoBehaviour:
   color: 1
   comment: 
   time: 0
-  name: EnemyPatrol
+  name: EnemyGroundPatrol
   isStartNode: 0
   parent: {fileID: 0}
   transitions: []

@@ -171,6 +171,7 @@ Transform:
   - {fileID: 429741224524353666}
   - {fileID: 2363039709422645512}
   - {fileID: 4094402728303653508}
+  - {fileID: 2600233207630693877}
   m_Father: {fileID: 3569563425792827700}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2279813514243871716
@@ -621,6 +622,69 @@ MonoBehaviour:
         stringValue: 
         vector2Value: {x: 0, y: 0}
         vector3Value: {x: 0, y: 0, z: 0}
+--- !u!1 &4901005650122111661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2600233207630693877}
+  - component: {fileID: 3842840462376312813}
+  - component: {fileID: 6325978882828809955}
+  m_Layer: 7
+  m_Name: PlayerTeleport
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2600233207630693877
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901005650122111661}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1265562201879863359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3842840462376312813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901005650122111661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec285135d7fa2f4da9a7592b70b567b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  IsValid: 0
+--- !u!114 &6325978882828809955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901005650122111661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89428f4c55ae4e84e9e6e91b4deaec02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyRequired: 0
+  NumberRifts: 2
+  MaxTimer: 5
+  RiftPrefab: {fileID: 6927932259729863895, guid: 7ea7f250e4829f14f9e69ff1f69ae81a, type: 3}
 --- !u!1 &5209405665665957466
 GameObject:
   m_ObjectHideFlags: 0
